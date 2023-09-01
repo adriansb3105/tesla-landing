@@ -1,0 +1,60 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<div id="background" class="sidebar-toggler absolute left-0 top-0 backdrop-blur-sm backdrop-brightness-75 opacity-0 transition-opacity ease-in-out duration-500" />
+
+<aside id="sidebar" class="fixed z-40 right-0 top-0 w-4/5 2xs:w-80 h-screen pl-7 pr-5 bg-white overflow-y-scroll transform translate-x-full opacity-0 transition-all ease-in-out duration-500">
+    <header class="sticky top-0 right-0 py-5 flex justify-between items-center bg-white">
+        <a href="#" class="inline-block mt-[2.4px]" aria-label="Tesla Logo">
+            <Logo />
+        </a>
+
+        <button class="sidebar-toggler p-2 rounded hover:bg-gray-100 transition duration-100">
+            <img loading="lazy" src="/x.svg" alt="Close" width="23" height="23" alt="Cerrar" />
+        </button>
+    </header>
+
+    <nav class="pb-40">
+        <ul class="flex flex-col gap-1">
+            <li><a href="https://www.tesla.com/es_es/drive" class={"block mr-2 pl-3 py-2 text-sm font-medium text-black rounded-[5px] hover:bg-gray-100 transition duration-100"} target="_blank">Prueba de conducción</a></li>
+            <li><a href="https://www.tesla.com/es_es/fleet" class={"block mr-2 pl-3 py-2 text-sm font-medium text-black rounded-[5px] hover:bg-gray-100 transition duration-100"} target="_blank">Coches de empresa</a></li>
+            <li><a href="https://www.tesla.com/es_es/powerwall" class={"block mr-2 pl-3 py-2 text-sm font-medium text-black rounded-[5px] hover:bg-gray-100 transition duration-100"} target="_blank">Energía</a></li>
+            <li><a href="https://www.tesla.com/es_es/careers" class={"block mr-2 pl-3 py-2 text-sm font-medium text-black rounded-[5px] hover:bg-gray-100 transition duration-100"} target="_blank">Empleo</a></li>
+            <li><a href="https://www.tesla.com/es_es/findus?v=2&bounds=50.9708554156387%2C-65.51660275%2C26.95925072234543%2C-133.01660275&zoom=5&filters=store%2Cservice%2Csupercharger%2Cdestination%20charger%2Cbodyshop%2Cparty" class={"block mr-2 pl-3 py-2 text-sm font-medium text-black rounded-[5px] hover:bg-gray-100 transition duration-100"} target="_blank">Dónde estamos</a></li>
+            <li><a href="https://www.tesla.com/es_es/events" class={"block mr-2 pl-3 py-2 text-sm font-medium text-black rounded-[5px] hover:bg-gray-100 transition duration-100"} target="_blank">Eventos</a></li>
+            <li><a href="https://ir.tesla.com/#quarterly-disclosure" class={"block mr-2 pl-3 py-2 text-sm font-medium text-black rounded-[5px] hover:bg-gray-100 transition duration-100"} target="_blank">Relaciones con los inversores</a></li>
+            <li><a href="https://www.tesla.com/es_es/cybertruck" class={"block mr-2 pl-3 py-2 text-sm font-medium text-black rounded-[5px] hover:bg-gray-100 transition duration-100"} target="_blank">Cybertruck</a></li>
+            <li><a href="https://www.tesla.com/es_es/roadster" class={"block mr-2 pl-3 py-2 text-sm font-medium text-black rounded-[5px] hover:bg-gray-100 transition duration-100"} target="_blank">Roadster</a></li>
+
+            <li class="mr-2 pl-3 py-3 rounded-[5px] hover:bg-gray-100 transition duration-100">
+                <button class="flex gap-2">
+                    <div>
+                        <img loading="lazy" src="/language.svg" alt="Language" width="30" height="30" class="mt-1" alt="Idioma" />
+                    </div>
+                    <div class="flex flex-col gap-[2px] items-start">
+                        <p class="text-sm font-medium">Español</p>
+                        <p class="text-sm font-medium text-gray-500">España</p>
+                    </div>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</aside>
+
+<script>
+    const toggleButton = document.querySelectorAll(".sidebar-toggler");
+    const sideBar = document.querySelector("#sidebar");
+    const background = document.querySelector("#background");
+
+    toggleButton.forEach((button) => {
+        button.addEventListener("click", () => {
+            background.classList.toggle("w-screen");
+            background.classList.toggle("h-screen");
+            background.classList.toggle("z-20");
+            background.classList.toggle("opacity-0");
+            sideBar.classList.toggle("opacity-0");
+            sideBar.classList.toggle("translate-x-full");
+        });
+    });
+</script>

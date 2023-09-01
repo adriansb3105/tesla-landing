@@ -1,6 +1,5 @@
 ---
 import Logo from "./Logo.astro";
-
 ---
 
 <header id="landing-header" class="py-3 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-white">
@@ -10,21 +9,24 @@ import Logo from "./Logo.astro";
     
     <nav class="hidden xl:block sm:hidden">
         <ul class="flex text-sm [&>li>a]:transition [&>li>a]:duration-200 [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
-            <li><a href="#">Model S</a></li>
-            <li><a href="#">Model 3</a></li>
-            <li><a href="#">Model X</a></li>
-            <li><a href="#">Model Y</a></li>
-            <li><a href="#">Powerwall</a></li>
-            <li><a href="#">Carga</a></li>
+            <li><a href="#model-3">Model 3</a></li>
+            <li><a href="#model-y">Model Y</a></li>
+            <li><a href="#model-s">Model S</a></li>
+            <li><a href="#model-x">Model X</a></li>
+            <li><a href="#powerwall">Powerwall</a></li>
+            <li><a href="#accesorios">Carga</a></li>
         </ul>
     </nav>
 
     <nav class="flex flex-grow basis-0 justify-end">
         <ul class="flex text-sm [&>li>a]:text-current [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2">
-            <li class="hidden xl:block sm:hidden"><a href="#">Soporte</a></li>
-            <li class="hidden xl:block sm:hidden"><a href="#">Tienda</a></li>
-            <li class="hidden xl:block sm:hidden"><a href="#">Cuenta</a></li>
-            <li><a href="#">Menú</a></li>
+            <li class="hidden xl:block sm:hidden"><a href="https://www.tesla.com/es_ES/support" target="_blank">Soporte</a></li>
+            <li class="hidden xl:block sm:hidden"><a href="https://shop.tesla.com/es_es" target="_blank">Tienda</a></li>
+            <li class="hidden xl:block sm:hidden"><a href="https://auth.tesla.com/es_es" target="_blank">Cuenta</a></li>
+
+            <li><a href="#" class="hover-overlay sidebar-toggler">Menú</a>
+                <!--<button class="hover-overlay sidebar-toggler px-4 py-1 text-sm font-medium text-current rounded-[5px] bg-white/5 backdrop-blur-lg 2.5xl:rounded-none 2.5xl:bg-transparent 2.5xl:backdrop-blur-none transition-colors duration-200">Menú</button>-->
+            </li>
         </ul>
     </nav>
 
