@@ -22,9 +22,10 @@ Inside the project components, you will see the following:
 ├── src/
 │   ├── components/
 │   │   └── Accessories.astro
-│   │   └── FooterMenu.astro
+│   │   └── Footer.astro
+│   │   └── Header.astro
 │   │   └── HeroSection.astro
-│   │   └── LandingHeader.astro
+│   │   └── HoverOverlay.astro
 │   │   └── Logo.astro
 │   │   └── ModelS.astro
 │   │   └── ModelThree.astro
